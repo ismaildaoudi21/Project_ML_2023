@@ -1,5 +1,5 @@
 # How to install (with anaconda)
-```python
+```bash
 conda create -n "books-rating" python=3.11
 
 conda activate books-rating
