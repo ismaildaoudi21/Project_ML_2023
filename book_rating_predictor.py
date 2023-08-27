@@ -29,12 +29,8 @@ book_to_predict = pd.DataFrame(
 book_to_predict["publisher_encoded"] = book_to_predict["publisher"].map(publisher_encoding_map)
 book_to_predict["authors_encoded"] = book_to_predict["authors"].map(authors_encoding_map)
 
-print(book_to_predict)
-
 book_to_predict = book_to_predict[["publisher_encoded", "authors_encoded"]]
 
-print(book_to_predict)
+prediction = model.predict(book_to_predict)[0]
 
-prediction = model.predict(book_to_predict)
-
-print(prediction)
+print(f"Average rating predicted : {prediction}")
