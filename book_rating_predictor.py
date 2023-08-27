@@ -17,6 +17,7 @@ with open(authors_encoding_map_file_path, "rb") as file:
 
 model = load("book_rating_predictor.joblib")
 
+# Change the publisher and authors to those of any book to predict the average rating
 book_to_predict = pd.DataFrame(
     {
         "publisher": "Scholastic",
